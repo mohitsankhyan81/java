@@ -1,5 +1,5 @@
 public class object{
-  class Rectangle{
+  public class Rectangle{
     int length;
     int breadth;
 
