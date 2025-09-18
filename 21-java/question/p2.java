@@ -3,45 +3,46 @@ import java.util.Random;
 import java.util.Scanner;
 
 class game{
-  private int number;
-  private int countgess;
-  private int userinput;
+  public int number;
+  public int countgess;
+  public int userinput;
 
   public game(){
     Random rand=new Random();
     number=rand.nextInt(100)+1;
-    countgess++;
+    countgess=0;
   }
 
   public void getinput(){
-    Scanner sc=new Scanner(System.in);
-    System.out.print("Enter input between 1 to 100 ");
-    userinput=sc.nextInt();
+    Scanner sn=new Scanner(System.in);
+    System.out.print("Enter no between 1 to 100 ");
+    userinput=sn.nextInt();
     countgess++;
   }
 
   public boolean isCorrectNumber(){
     if(userinput==number){
-      System.out.println("Congrats your win the game on "+countgess);
+      System.out.println("congrats we find number in "+countgess);
       return true;
     }
     else if(userinput>number){
-      System.out.println("The input is so high ");
+      System.out.println("This is to high");
     }
     else{
-      System.out.println("The nomber is too low ");
+      System.out.println("this is to low");
     }
     return false;
   }
-
+  
   public int getcount(){
-    return countgess;
+  return countgess;
   }
 
   public void setcount(int gess){
     this.countgess=gess;
   }
 }
+
 
 public class p2{
   public static void main(String arg[]){
