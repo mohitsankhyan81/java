@@ -1,57 +1,54 @@
-
 import java.util.Random;
 import java.util.Scanner;
 
-class game{
+class gessno{
   public int number;
-  public int countgess;
+  public int gesscount;
   public int userinput;
 
-  public game(){
+  public gessno(){
     Random rand=new Random();
     number=rand.nextInt(100)+1;
-    countgess=0;
+    gesscount=0;
   }
 
   public void getinput(){
     Scanner sn=new Scanner(System.in);
-    System.out.print("Enter no between 1 to 100 ");
+    System.out.print("Enter the number from 1 to 100 ");
     userinput=sn.nextInt();
-    countgess++;
+    gesscount++;
   }
 
-  public boolean isCorrectNumber(){
+  public boolean  iscorrect(){
     if(userinput==number){
-      System.out.println("congrats we find number in "+countgess);
+      System.out.println("THis is the corect gess " + gesscount);
       return true;
     }
     else if(userinput>number){
-      System.out.println("This is to high");
+      System.out.println("Number is so high");
     }
     else{
-      System.out.println("this is to low");
+      System.out.println("Number is too low");
     }
     return false;
   }
   
   public int getcount(){
-  return countgess;
+    return gesscount;
   }
-
   public void setcount(int gess){
-    this.countgess=gess;
+    this.gesscount=gess;
   }
 }
 
-
 public class p2{
   public static void main(String arg[]){
-    game g=new game();
+    gessno g=new gessno();
     boolean win=false;
 
     while(!win){
       g.getinput();
-      win=g.isCorrectNumber();
+      win=g.iscorrect();
     }
   }
 }
