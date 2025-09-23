@@ -16,11 +16,17 @@ public class special {
 
     try{
       System.out.println("This number which you want to devide "+arr[ind]);
-      System.out.println("This is the no which devide your index no "+arr[number]);
-      System.out.println("This is the result "+arr[ind]/arr[number]);
+      System.out.println("This is the no which devide your index no "+number);
+      System.out.println("This is the result "+arr[ind]/number);
+    }
+    catch(ArithmeticException e){
+      System.out.println("ArithmeticException accors"+e);
+    }
+    catch(ArrayIndexOutOfBoundsException e){
+      System.out.println("ArrayIndexOutOfBoundsException accors"+e);
     }
     catch(Exception e){
-      System.out.println("Some exxeption accors"+e);
+      System.out.println("Some other exxeption accors"+e);
     }
   }
 }
