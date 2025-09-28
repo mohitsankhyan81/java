@@ -60,5 +60,8 @@ public class abstracting {
     BasicAnimal lovish =new human();
     lovish.eat();
     lovish.sleap();
+
+
+    
   }
 }
