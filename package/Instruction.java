@@ -6,7 +6,7 @@
 // -> javac foldername/*.java
 
 //third jo run able file hai us ko run karo
-// -> javac filename.javac
+// -> javac filename.java
 
 //run using 
-// -> javac filename
+// -> java filename
