@@ -115,7 +115,7 @@ public class onlinebooking {
 
     System.out.println("==== ONLINE ORDER & DELIVERY SYSTEM ====");
 
-    ArrayList<Product> catalog=new ArrayList<>();
+    ArrayList<Product> catalog=new ArrayList<Product>();
     catalog.add(new Product("pizza", 250));
     catalog.add(new Product("Burger",120));
     catalog.add(new Product("Pasta",180));
