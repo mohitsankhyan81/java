@@ -1,0 +1,4 @@
+chai 4365.0
+bread 4532.0
+paper 46778.0
+suitecase 463476.0
