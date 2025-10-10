@@ -1,5 +1,6 @@
 class thread1 implements Runnable{
   private String name;
+  
 
   thread1(String n){
     name=n;
