@@ -1,6 +1,6 @@
-public class mergesort {
+public class mergeshort{
 
-  public static void merger(int arr[],int si,int mid ,int ei){
+  public static void merge(int arr[],int si,int mid,int ei){
     int[] merger=new int[ei-si+1];
     int idx1=si;
     int idx2=mid+1;
@@ -23,11 +23,11 @@ public class mergesort {
       merger[x++]=arr[idx2++];
     }
 
-
     for(int i=0,j=si;i<merger.length;i++,j++){
       arr[j]=merger[i];
     }
   }
+
   public static void divide(int arr[],int si,int ei){
     if(si>=ei){
       return;
@@ -35,12 +35,12 @@ public class mergesort {
     int mid=si+(ei-si)/2;
     divide(arr,si,mid);
     divide(arr,mid+1,ei);
-    merger(arr,si,mid,ei);
+    merge(arr,si,mid,ei);
   }
   public static void main(String arg[]){
-    int arr[]={2,1,6,3,4,8,7};
+    int[] arr={3,2,6,4,7,1,9};
     int n=arr.length;
-
+    
     divide(arr,0,n-1);
 
     for(int i=0;i<n;i++){
