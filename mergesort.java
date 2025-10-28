@@ -11,7 +11,7 @@ public class mergesort {
         merger[x++]=arr[idx1++];
       }
       else{
-        merger[x++]=arr[idx2++];
+        merger[x++]=arr[idx2++]; 
       }
     }
 
