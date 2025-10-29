@@ -10,16 +10,15 @@ public class LL{
     }
   }
 
+
   Node head;
-
-
   public void addFirst(String data){
     Node newNode=new Node(data);
+
     if(head==null){
       head=newNode;
       return;
     }
-
     newNode.next=head;
     head=newNode;
   }
@@ -31,32 +30,33 @@ public class LL{
       return;
     }
 
-    Node couNode=head;
-    while(couNode.next !=null){
-      couNode=couNode.next;
+    Node currNode=head;
+    while(currNode.next!=null){
+      currNode=currNode.next;
     }
-    couNode.next=newNode;
+
+    currNode.next=newNode;
   }
 
-  public void printdata(){
+  public void printNode(){
     if(head==null){
-      System.out.println("This is empty");
+      System.out.println("This is null");
       return;
     }
-    Node couNode=head;
-    while(couNode!=null){
-      System.out.print(couNode.data+"->");
-      couNode=couNode.next;
+    Node currNode=head;
+
+    while(currNode!=null){
+      System.out.print(currNode.data+"->");
+      currNode=currNode.next;
     }
-    System.out.print("Null");
+    System.out.println("Null");
   }
-  public static void main(String arg[]){
+  public static void main(String[] args) {
     LL list=new LL();
 
     list.addFirst("A");
     list.addFirst("C");
     list.addLast("B");
-
-    list.printdata();
+    list.printNode();
   }
 }
