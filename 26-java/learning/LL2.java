@@ -70,7 +70,7 @@ public class LL2 {
     secNode.next=null;
   }
 
-  public void printNode(String data){
+  public void printNode(){
     if(head==null){
       System.out.println("This is Empty");
       return;
@@ -88,7 +88,7 @@ public class LL2 {
     return size;
   }
   public static void main(String arg[]){
-    LL list=new LL();
+    LL2 list=new LL2();
     list.addFirst("A");
     list.addFirst("C");
     list.addLast("B");
