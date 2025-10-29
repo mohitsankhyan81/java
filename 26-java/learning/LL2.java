@@ -63,7 +63,7 @@ public class LL2 {
     Node secNode=head;
     Node lastNode=head.next;
 
-    while(lastNode !=null){
+    while(lastNode.next!=null){
       lastNode=lastNode.next;
       secNode=secNode.next;
     }
@@ -79,9 +79,10 @@ public class LL2 {
     Node currNode=head;
 
     while(currNode!=null){
-      System.out.print(currNode.next+"->");
+      System.out.print(currNode.data+"->");
+      currNode=currNode.next;
     }
-    System.out.println("This is null");
+    System.out.println("Null");
   }
 
   public int getsize(){
