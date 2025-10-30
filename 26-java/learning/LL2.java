@@ -1,19 +1,24 @@
-public class LL2 {
+public class LL2{
   private int size;
-    LL2(){
+
+    public LL2() {
       this.size=0;
     }
+
+  
   class Node{
     String data;
     Node next;
 
     Node(String data){
+      size++;
       this.data=data;
       this.next=null;
-      size++;
     }
   }
+
   Node head;
+
   public void addFirst(String data){
     Node newNode=new Node(data);
     if(head==null){
@@ -34,11 +39,12 @@ public class LL2 {
 
     Node currNode=head;
 
-    while(currNode.next!=null){
+    while(currNode.next != null){
       currNode=currNode.next;
     }
+
     currNode.next=newNode;
-  };
+  }
 
   public void deleteFirst(){
     if(head==null){
@@ -51,7 +57,7 @@ public class LL2 {
 
   public void deleteLast(){
     if(head==null){
-      System.out.println("This is empty");
+      System.out.print("This is empty");
       return;
     }
     size--;
@@ -63,10 +69,11 @@ public class LL2 {
     Node secNode=head;
     Node lastNode=head.next;
 
-    while(lastNode.next!=null){
-      lastNode=lastNode.next;
+    while(lastNode.next !=null){
       secNode=secNode.next;
+      lastNode=lastNode.next;
     }
+
     secNode.next=null;
   }
 
@@ -77,7 +84,6 @@ public class LL2 {
     }
 
     Node currNode=head;
-
     while(currNode!=null){
       System.out.print(currNode.data+"->");
       currNode=currNode.next;
@@ -85,17 +91,21 @@ public class LL2 {
     System.out.println("Null");
   }
 
+
   public int getsize(){
-    return size;
+  return size;
   }
   public static void main(String arg[]){
     LL2 list=new LL2();
+
     list.addFirst("A");
     list.addFirst("C");
     list.addLast("B");
     list.addFirst("F");
+
     list.deleteFirst();
     list.deleteLast();
+
     list.printNode();
 
     System.out.println(list.getsize());
