@@ -33,7 +33,7 @@ public class Yearlyexpences {
     try {
         Scanner FileReader=new Scanner(new File(file));
         double total=0;
-        while(FileReader.hasNextLine()){
+          while(FileReader.hasNextLine()){
           String line=FileReader.nextLine();
           System.out.println(line);
           String[] parts=line.split(",");
